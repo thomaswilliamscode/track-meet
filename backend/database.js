@@ -1,3 +1,6 @@
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database(':memory:');
+const knex = require('knex');
+const knexConfig = require('../knexfile');
 
+const db = knex(knexConfig.development);
+
+module.exports = db;
