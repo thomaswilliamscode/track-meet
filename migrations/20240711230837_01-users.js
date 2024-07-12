@@ -28,7 +28,7 @@ exports.up = function(knex) {
 				.inTable('program')
 				.onUpdate('CASCADE')
 				.onDelete('CASCADE');
-			table.string('sprint').notNullable();
+			table.integer('sprint').notNullable();
 			table.integer('points').notNullable();
 			table.integer('role')
 				.notNullable()
